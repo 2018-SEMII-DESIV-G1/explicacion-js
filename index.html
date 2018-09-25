@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo Javascript</title>
+</head>
+<body>
+    <h1>Explicación de Javascript</h1>
+    <script>
+        var git = 'Github';
+        (function(_git){
+            // Comentario 
+            
+            /*
+            Comentario multilinea
+            */
+
+            // Variables
+            var a = 27;
+            console.log(a);
+            console.log(typeof(a));
+
+            var b = 'Erick';
+            console.log(b);
+            console.log(typeof(b));
+
+            // Manejo de string
+            console.log('El profesor ' + b + ' tiene ' + a + ' años.');
+            console.log(`El profesor ${b} tiene ${a} años.`);
+
+            // Manejo de funciones
+            function sumar(a, b){
+                return a + b;
+            }
+            console.log(sumar(10, 20));
+
+            // Arreglos
+            var c = [50, 50, 40, 65];
+            console.log(c);
+
+            var i = 0;
+            while(i < c.length){
+                console.log('While: ' + c[i]);
+                i += 1;
+            }
+
+            for(var i = 0; i<c.length; i++){
+                console.log('For: ' + c[i]);
+            }
+
+            c.forEach(function(n, i){
+                console.log('forEach: ' + n);
+            });
+
+            c = c.map(function(n, i){
+                return n + 1;
+            });
+            console.log(c);
+
+            console.log('El mejor manejador de git es: ' + _git)
+        })(git);
+    </script>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
